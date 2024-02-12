@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="styles.css"> <!-- STYLESHEET TIL NAVIGATION -->
 
     <link rel="stylesheet" href="valuta.css"> <!--LAV DENNE STYLESHEET OM TIL JERES EGNE-->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
     <script src="dropdown.js" defer></script>
+
 </head>
 <body>
     <nav>
@@ -58,6 +60,45 @@
     </nav>
 
     <main>
+        <div class="container">
+            <div class="calculator">
+                <div class="calculator-header">
+                    <h1 class="calculator-title">Valutaomregner</h1>
+
+                    <p>Omregn et beløb fra en valuta til en anden, 
+                    fx. danske kroner til euro, eller euro til US dollar. 
+                    Kursen, du får vist, er WMR (Reuters) middelkurs, der bliver opdateret én<br>
+                    gang dagligt. De viste kurser er derfor vejledende.<br><br>
+                    
+                    Du finder en udvidet kursliste og historiske kurser nederst på siden.</p>
+                </div>
+                <div class="calculator-body">
+                    <div class="input-group">
+                        <select id="fromCurrency">
+                            <option value="" disabled selected>Vælg valuta</option>
+                            <option value="USD">Amerikanske dollars</option>
+                            <option value="EUR">Euro</option>
+                            <option value="DKK">Danske kroner</option>
+                            <option value="GBP">Britiske pund</option>
+                        </select>
+                        <input type="number" id="amount" min="0" step="0.01" placeholder="Indtast beløb">
+                    </div>
+                    <div class="input-group">
+                        <select id="toCurrency">
+                            <option value="" disabled selected>Vælg valuta</option>
+                            <option value="USD">Amerikanske dollars</option>
+                            <option value="EUR">Euro</option>
+                            <option value="DKK">Danske kroner</option>
+                            <option value="GBP">Britiske pund</option>
+                        </select>
+                        <input type="text" id="result" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <script src="valuta.js"></script>
+
 </body>
 </html>
