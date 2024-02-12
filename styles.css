@@ -1,0 +1,93 @@
+/* VVV NAVIGATION! VVV */
+
+* {
+    margin: 0px;
+    list-style: none;
+}
+body {
+    background-color: #fbfdfe;
+    color: #002337;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+main {
+    padding-top: 60px;
+    max-width: 1440px;
+    margin: auto;
+}
+.topnav {
+    display: block;
+    background-color: #d7e9f1;
+    height: 42px;
+    width: 100%;
+}
+.toplinks {
+    max-width: 1200px;
+    margin: auto;
+}
+.toplinks > ul {
+    display: flex;
+    flex-direction: row;
+}
+.toplinks > ul > li {
+    line-height: 42px;
+    margin-right: 20px;
+
+    padding: 0px 20px;
+}
+.mainnav {
+    width: 100%;
+    background-color: #fff;
+}
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 102px;
+    max-width: 1200px;
+    margin: auto;
+}
+.mainmenu {
+    display: flex;
+    align-items: center;
+}
+.mainmenu > p {
+    font-size: 24px;
+    border: 2px solid #002337;
+    padding: 6px 12px;
+}
+.mainmenu > ul {
+    display: flex;
+}
+.mainmenu > ul > li {
+    padding: 0px 20px;
+    font-weight: 600;
+    line-height: 42px;
+}
+.blue {
+    color:#007bc7;
+}
+.rightmenu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.rightmenu > p {
+    font-weight: 600;
+}
+.logon {
+    border: #007bc7 2px solid;
+    background-color: #007bc7;
+    padding: 15px 32px;
+    border-radius: 1000px;
+    color: #fff;
+}
+/* ------ END OF NAVIGATION ------ */
+
+/* VVV MAIN SECTIONS & BLOCKS VVV */
+
+.block {
+    background-color: #d7e9f1;
+}
+
+/* LAV NY CSS FIL TIL valuta.html */
