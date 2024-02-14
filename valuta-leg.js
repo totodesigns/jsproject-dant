@@ -1,32 +1,28 @@
-document.getElementById("amount").addEventListener("input", function() {
-    convertCurrency();
-});
-
-document.getElementById("fromCurrency").addEventListener("change", function() {
-    convertCurrency();
-});
-
-document.getElementById("toCurrency").addEventListener("change", function() {
-    convertCurrency();
-});
+document.getElementById("amount").addEventListener("input", convertCurrency);
+document.getElementById("fromCurrency").addEventListener("change", handleCurrencyChange);
+document.getElementById("toCurrency").addEventListener("change", handleCurrencyChange);
 
 function convertCurrency() {
-    var fromCurrency = document.getElementById("fromCurrency").value;
-    var toCurrency = document.getElementById("toCurrency").value;
-    var amount = parseFloat(document.getElementById("amount").value);
+    let fromCurrency = document.getElementById("fromCurrency").value;
+    let toCurrency = document.getElementById("toCurrency").value;
+    let amount = parseFloat(document.getElementById("amount").value);
 
     if (fromCurrency === toCurrency) {
         document.getElementById("result").value = amount.toFixed(2) + " " + toCurrency;
         return;
     }
 
-    var exchangeRate = getExchangeRate(fromCurrency, toCurrency);
-    var result = (amount * exchangeRate).toFixed(2);
+    let exchangeRate = getExchangeRate(fromCurrency, toCurrency);
+    let result = (amount * exchangeRate).toFixed(2);
 
     document.getElementById("result").value = result + " " + toCurrency;
 }
 
-var exchangeRates = [
+function handleCurrencyChange() {
+    convertCurrency();
+}
+
+const exchangeRates = [
     // USD
     {
         name: "USD",
@@ -66,14 +62,13 @@ var exchangeRates = [
 ];
 
 function getExchangeRate(fromCurrency, toCurrency) {
+    let fromCurrencyObj = exchangeRates.find(currency => currency.name === fromCurrency);
     
-    var fromCurrencyObj = exchangeRates.find(function(currency) {
-        return currency.name === fromCurrency;
-    });
+    for (let rateObj of fromCurrencyObj.rates) {
+        if (rateObj.name === toCurrency) {
+            return rateObj.rate;
+        }
+    }
 
-    var exchangeRateObj = fromCurrencyObj.rates.find(function(rate) {
-        return rate.name === toCurrency;
-    });
-
-    return exchangeRateObj.rate;
+    return null; // Returnerer null, hvis valutakursen ikke findes
 }
