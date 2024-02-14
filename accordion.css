@@ -1,0 +1,53 @@
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0.4em;
+}
+p {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 0.4em;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 51px 39px;
+    gap: 20px;
+}
+.text {
+    width: 50%;
+    margin-left: 25%;
+}
+.accordions {
+    width: 50%;
+    margin-left: 25%;
+}
+.accordion {
+    color: #002337;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    border-width: 0px 0px 1px 0px;
+    padding: 1.2em;
+    font-weight: 600;
+    font-size: 15px;
+}
+#top {
+    border-width: 1px 0px 1px 0px;
+}
+.panel {
+    display: none;
+    background-color: inherit;
+    overflow: hidden;
+}
+.panel > p {
+    color: #002337;
+    font-size: 14px;
+    text-align: left;
+    padding: 2rem 5em;
+}
