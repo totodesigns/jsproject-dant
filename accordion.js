@@ -1,25 +1,7 @@
-// var acc = document.getElementsByClassName("accordion");
-// var i;
+const acc = document.getElementsByClassName("accordion");
+const panels = document.getElementsByClassName("panel"); // Set variable for an array of all panels
 
-// for (i = 0; i < acc.length; i++) {
-//   acc[i].addEventListener("click", function() {
-//     let panel = this.nextElementSibling;
-
-//     if (panel.style.display === "block") {
-//         panel.style.display = "none";
-//         this.style.borderBottom = "1px solid";
-//     } else {
-//         panel.style.display = "block";
-//         panel.style.borderBottom = "1px solid";
-//         this.style.borderBottom = "none";
-//       }
-//   });
-// }
-
-var acc = document.getElementsByClassName("accordion");
-var panels = document.getElementsByClassName("panel"); // Set variable for an array of all panels
-
-for (var i = 0; i < acc.length; i++) {
+for (let i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     let panel = this.nextElementSibling; // Target the panel where "this" represents the accordion button
 
