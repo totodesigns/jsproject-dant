@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Hjælp</title>
+    <link rel="stylesheet" href="styles.css"> <!-- STYLESHEET TIL NAVIGATION -->
+
+    <link rel="stylesheet" href="valuta-leg.css"> <!--LAV DENNE STYLESHEET OM TIL JERES EGNE-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <script src="dropdown.js" defer></script>
+
+</head>
+<body>
+    <nav>
+        <div class="topnav">
+            <div class="toplinks">
+                <ul>
+                    <li>PRIVAT</li>
+                    <li>ERHVERV</li>
+                    <li>PRIVATE BANKING</li>
+                    <li>LC&I</li>
+                    <li id="andre-sites" class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn"> ANDRE SITES <i class="fas fa-angle-down"></i></button>
+                            <div id="myDropdown" class="dropdownIndhold">
+                                <a href="#">Boligværktøj</a>
+                                <a href="#">Foreninger</a>
+                                <a href="#">dankskebank.com</a>
+                                <a href="#">Asset Management</a>
+                                <a href="#">Unge og studerende</a>
+                            </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mainnav">
+            <div class="inner">
+                <div class="mainmenu">
+                    <p>DANSKE BANK</p>
+                    <ul>
+                        <li>Mit liv</li>
+                        <li>Produkter</li>
+                        <li>Digitale værktøjer</li>
+                        <li class="blue">Find hjælp</li>
+                        <li>Bliv kunde</li>
+                    </ul>
+                </div>
+                <div class="rightmenu">
+                    <p>English</p>
+                    <div class="search">"icon"
+                    </div>
+                    <div class="logon">
+                        Log på
+                        "icon"
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="calculator">
+                <div class="calculator-header">
+                    <h1 class="calculator-title">Valutaomregner</h1>
+
+                    <p>Omregn et beløb fra en valuta til en anden, 
+                    fx. danske kroner til euro, eller euro til US dollar.</p>
+
+                </div>
+                <div class="calculator-body">
+                    <div class="input-group">
+                        <select id="fromCurrency">
+                            <option value="" disabled selected>Vælg valuta</option>
+                            <option value="USD">Amerikanske dollars</option>
+                            <option value="EUR">Euro</option>
+                            <option value="DKK">Danske kroner</option>
+                            <option value="GBP">Britiske pund</option>
+                        </select>
+                        <input type="number" id="amount" min="0" step="0.01" placeholder="Indtast beløb">
+                    </div>
+                    <div class="input-group">
+                        <select id="toCurrency">
+                            <option value="" disabled selected>Vælg valuta</option>
+                            <option value="USD">Amerikanske dollars</option>
+                            <option value="EUR">Euro</option>
+                            <option value="DKK">Danske kroner</option>
+                            <option value="GBP">Britiske pund</option>
+                        </select>
+                        <input type="text" id="result" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="valuta-leg.js"></script>
+
+</body>
+</html>
