@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Hjælp</title>
-    <link rel="stylesheet" href="styles.css"> <!-- STYLESHEET TIL NAVIGATION -->
+    <link rel="stylesheet" href="search_function.css"> <!-- STYLESHEET TIL NAVIGATION -->
     <link rel="stylesheet" href="accordion.css"> <!-- STYLESHEET TIL ACCORDION -->
+    <link rel="stylesheet" href="search_function.css"> <!-- STYLESHEET TIL ACCORDION -->
+    <link rel="stylesheet" href="styles.css">
+    
+
     <script src="accordion.js" defer></script>
+    <script src="search_function.js" defer></script>
 </head>
 <body>
     <nav>
@@ -38,8 +43,9 @@
                 </div>
                 <div class="rightmenu">
                     <p>English</p>
-                    <div class="search">"icon"
-                    </div>
+
+                    <a class="search_icon">"icon"</a>
+                    
                     <div class="logon">
                         Log på
                         "icon"
@@ -49,23 +55,25 @@
         </div>
     </nav>
     <main>
-        <section class="block">
-            <div class="content">
-                <div class="text">
-                    <h1><i>Hjælp til funktioner i mobilbank, netbank og anden selvbetjening</i></h1>
-                    <p>Få svar på de mest stillede spørgsmål</p>
-                </div>
-                <div class="accordion">
-                    <ul>
-                        <li><button class="accitem">Vil du tjekke din saldo?</button></li>
-                        <li>Vil du spærre et kort?</li>
-                        <li>Kan du ikke genkende beløb, der er trukket fra dit kort?</li>
-                        <li>Vil du have et personligt kodeord til onlinekøb med Mastercard?</li>
-                        <li>Vil du oprette, slette eller afvise en betaling, der er tilmeldt Betalingsservice?</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <!-- -------------------------------------------- -->
+        <div class="searchbar">
+            <input id="search"  type="text" name="search"
+               placeholder="Søg på f.eks Lån">
+
+            <ul id="subjects">
+                <li><a href="#">Side 1</a></li>
+                <li><a href="#">Side 2</a></li>
+              
+                <li><a href="#">Bank 1</a></li>
+                <li><a href="#">Bank 2</a></li>
+              
+                <li><a href="#">Lån 1</a></li>
+                <li><a href="#">Lån 2</a></li>
+                <li><a href="#">Lån 3</a></li>
+            </ul>
+        </div>
+<!-- -------------------------------------------------------- -->
+
     </main>
 </body>
 </html>

@@ -1,0 +1,40 @@
+.searchbar {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+}
+
+#search:hover{
+    border-color: #007bc7;
+}
+
+#search {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 100px;
+    width: 60%;
+    box-sizing: border-box;
+ }
+
+
+li > a{
+    border: 1px solid #ddd; /* Add a border to all links */
+    width: 200%;
+    margin-top: -1px; /* Prevent double borders */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 16px; /* Increase the font-size */
+    color:#002337; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+#subjects {
+    align-self:self-start;
+    margin-left: 18%;
+    width:28%;
+    border-bottom: 5px;
+}
+
+
+
