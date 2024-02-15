@@ -18,7 +18,7 @@
  }
 
 
-li > a{
+#subjects > li > a{
     border: 1px solid #ddd; /* Add a border to all links */
     width: 200%;
     margin-top: -1px; /* Prevent double borders */
