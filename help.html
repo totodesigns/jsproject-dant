@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Hjælp</title>
-    <link rel="stylesheet" href="search_function.css"> <!-- STYLESHEET TIL NAVIGATION -->
+  
+    <link rel="stylesheet" href="search_function.css"> <!-- STYLESHEET TIL SEARCH FUNCTION -->
     <link rel="stylesheet" href="accordion.css"> <!-- STYLESHEET TIL ACCORDION -->
-    <link rel="stylesheet" href="search_function.css"> <!-- STYLESHEET TIL ACCORDION -->
-    <link rel="stylesheet" href="styles.css">
-    
-
+    <link rel="stylesheet" href="styles.css"> <!-- STYLESHEET TIL NAVIGATION -->
+    <link rel="stylesheet" href="valuta.css"> <!-- STYLESHEET TIL VALUTA -->
+  
     <script src="accordion.js" defer></script>
     <script src="search_function.js" defer></script>
+    <script src="valuta.js" defer></script>
+    <script src="dropdown.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+  
 </head>
 <body>
     <nav>
@@ -22,22 +27,28 @@
                     <li>ERHVERV</li>
                     <li>PRIVATE BANKING</li>
                     <li>LC&I</li>
-                    <li class="dropdown">
-                        ANDRE SITES
-                        "icon"
-                    </li>
+                    <li id="andre-sites" class="dropdown">
+                        <button onclick="navDropdown()" class="dropbtn"> ANDRE SITES <i class="fas fa-angle-down"></i></button>
+                        <div id="listDropdown" class="dropdownIndhold">
+                            <a href="#">Boligværktøj</a>
+                            <a href="#">Foreninger</a>
+                            <a href="#">dankskebank.com</a>
+                            <a href="#">Asset Management</a>
+                            <a href="#">Unge og studerende</a>
+                        </div>
+                </li>
                 </ul>
             </div>
         </div>
         <div class="mainnav">
             <div class="inner">
                 <div class="mainmenu">
-                    <p>DANSKE BANK</p>
+                    <p>DANT BANK</p>
                     <ul>
                         <li>Mit liv</li>
                         <li>Produkter</li>
-                        <li>Digitale værktøjer</li>
-                        <li class="blue">Find hjælp</li>
+                        <li><a href="valuta.html">Digitale værktøjer</a></li>
+                        <li style="color: #007bc7">Find hjælp</li>
                         <li>Bliv kunde</li>
                     </ul>
                 </div>
@@ -55,7 +66,8 @@
         </div>
     </nav>
     <main>
-        <!-- -------------------------------------------- -->
+
+        <!-- search_function.js -------------------------------------------- -->
         <div class="searchbar">
             <input id="search"  type="text" name="search"
                placeholder="Søg på f.eks Lån">
@@ -72,8 +84,65 @@
                 <li><a href="#">Lån 3</a></li>
             </ul>
         </div>
-<!-- -------------------------------------------------------- -->
 
+<!-- ACCORDION -------------------------------------------------------- -->
+        <section class="block">
+            <div class="content">
+                <div class="text">
+                    <h1><i>Hjælp til funktioner i mobilbank, netbank og anden selvbetjening</i></h1>
+                    <p>Få svar på de mest stillede spørgsmål</p>
+                </div>
+                <div class="accordions">
+                    <button class="accordion" id="top">Vil du tjekke saldo?<p>"icon"</p></button>
+                        <div class="panel">
+                            <p>Du kan nemt tjekke din saldo i mobilbanken. Så snart du er logget ind, ser du saldoen for alle dine konti.</p>
+                        </div>
+                    
+                    <button class="accordion">Vil du spærre et kort?<p>"icon"</p></button>
+                        <div class="panel">
+                            <p>Log på mobilbanken. 
+                                Vælg ”Kort” i den øverste menulinje. 
+                                Tryk på det kort, der skal spærres.
+                                Vælg ”Spær kortet midlertidigt”.
+                                Nu er kortet spærret. 
+                                
+                                Hvis kortet kun er blevet væk, og du finder det igen, ophæver du spærringen samme sted i mobilbanken. Har du mistanke om, at kortet er blevet misbrugt, må du ikke ophæve spærringen. 
+                                
+                                Har du ikke mobilbank, kan du spærre kortet via netbanken:
+                                
+                                Vælg ”Kort & valuta”.
+                                Klik på ”Kortoversigt”.
+                                Vælg det kort, der skal spærres.
+                                Klik på ”Spær kort”.</p>
+                        </div>
+                    
+                    <button class="accordion">Kan du ikke genkende beløb, der er trukket fra dit kort?<p>"icon"</p></button>
+                        <div class="panel">
+                            <p>Log på netbanken.
+                                Klik på ”Kortoversigt”. 
+                                Klik på funktionspilen ud for kortet. 
+                                Vælg ”Indsigelse”. 
+                                Læs mere: Indsigelse
+                                
+                                Har du har mistanke om, at dit kort er blevet misbrugt, skal du spærre det med det samme. </p>
+                        </div>
+                    
+                    <button class="accordion">Vil du have et personligt kodeord til onlinekøb med Mastercard?<p>"icon"</p></button>
+                        <div class="panel">
+                            <p>Klik på linket - så er du i gang: Kortstyring</p>
+                        </div>
+                    
+                    <button class="accordion">Vil du oprette, slette eller afvise en betaling, der er tilmeldt Betalingsservice?<p>"icon"</p></button>
+                        <div class="panel">
+                            <p>Log på netbanken.
+                                Klik på ”Se og opret Betalingsaftaler”.
+                                Vælg ”Betalingsservice”. </p>
+                        </div>
+                    
+                </div>
+
+            </div>
+        </section>
     </main>
 </body>
 </html>

@@ -6,8 +6,11 @@
     <title>Find Hjælp</title>
     <link rel="stylesheet" href="styles.css"> <!-- STYLESHEET TIL NAVIGATION -->
 
-    <link rel="stylesheet" href="???.css"> <!--LAV DENNE STYLESHEET OM TIL JERES EGNE-->
-    
+    <link rel="stylesheet" href="valuta.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <script src="dropdown.js" defer></script>
+
 </head>
 <body>
     <nav>
@@ -18,9 +21,15 @@
                     <li>ERHVERV</li>
                     <li>PRIVATE BANKING</li>
                     <li>LC&I</li>
-                    <li class="dropdown">
-                        ANDRE SITES
-                        "icon"
+                    <li id="andre-sites" class="dropdown">
+                            <button onclick="navDropdown()" class="dropbtn"> ANDRE SITES <i class="fas fa-angle-down"></i></button>
+                            <div id="listDropdown" class="dropdownIndhold">
+                                <a href="#">Boligværktøj</a>
+                                <a href="#">Foreninger</a>
+                                <a href="#">dankskebank.com</a>
+                                <a href="#">Asset Management</a>
+                                <a href="#">Unge og studerende</a>
+                            </div>
                     </li>
                 </ul>
             </div>
@@ -28,12 +37,12 @@
         <div class="mainnav">
             <div class="inner">
                 <div class="mainmenu">
-                    <p>DANSKE BANK</p>
+                    <p>DANT BANK</p>
                     <ul>
                         <li>Mit liv</li>
                         <li>Produkter</li>
-                        <li>Digitale værktøjer</li>
-                        <li class="blue">Find hjælp</li>
+                        <li style="color: #007bc7">Digitale værktøjer</li>
+                        <li><a href="help.html">Find hjælp</a></li>
                         <li>Bliv kunde</li>
                     </ul>
                 </div>
@@ -51,6 +60,42 @@
     </nav>
 
     <main>
+        <div class="container">
+            <div class="calculator">
+                <div class="calculator-header">
+                    <h1 class="calculator-title">Valutaomregner</h1>
+
+                    <p>Omregn et beløb fra en valuta til en anden, 
+                    fx. danske kroner til euro, eller euro til US dollar.</p>
+
+                </div>
+                <div class="calculator-body">
+                    <div class="input-group">
+                        <select id="fromCurrency">
+                            <option value="" disabled selected>Vælg valuta</option>
+                            <option value="USD">Amerikanske dollars</option>
+                            <option value="EUR">Euro</option>
+                            <option value="DKK">Danske kroner</option>
+                            <option value="GBP">Britiske pund</option>
+                        </select>
+                        <input type="number" id="amount" min="0" step="0.01" placeholder="Indtast beløb">
+                    </div>
+                    <div class="input-group">
+                        <select id="toCurrency">
+                            <option value="" disabled selected>Vælg valuta</option>
+                            <option value="USD">Amerikanske dollars</option>
+                            <option value="EUR">Euro</option>
+                            <option value="DKK">Danske kroner</option>
+                            <option value="GBP">Britiske pund</option>
+                        </select>
+                        <input type="text" id="result" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <script src="valuta.js"></script>
+
 </body>
 </html>
