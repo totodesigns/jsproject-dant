@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Hjælp</title>
-    <link rel="stylesheet" href="styles.css"> <!-- STYLESHEET TIL NAVIGATION -->
+  
+    <link rel="stylesheet" href="search_function.css"> <!-- STYLESHEET TIL SEARCH FUNCTION -->
     <link rel="stylesheet" href="accordion.css"> <!-- STYLESHEET TIL ACCORDION -->
-    <link rel="stylesheet" href="valuta.css">
+    <link rel="stylesheet" href="styles.css"> <!-- STYLESHEET TIL NAVIGATION -->
+    <link rel="stylesheet" href="valuta.css"> <!-- STYLESHEET TIL VALUTA -->
+  
     <script src="accordion.js" defer></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <script src="search_function.js" defer></script>
     <script src="valuta.js" defer></script>
     <script src="dropdown.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+  
 </head>
 <body>
     <nav>
@@ -49,8 +54,9 @@
                 </div>
                 <div class="rightmenu">
                     <p>English</p>
-                    <div class="search">"icon"
-                    </div>
+
+                    <a class="search_icon">"icon"</a>
+                    
                     <div class="logon">
                         Log på
                         "icon"
@@ -60,6 +66,26 @@
         </div>
     </nav>
     <main>
+
+        <!-- search_function.js -------------------------------------------- -->
+        <div class="searchbar">
+            <input id="search"  type="text" name="search"
+               placeholder="Søg på f.eks Lån">
+
+            <ul id="subjects">
+                <li><a href="#">Side 1</a></li>
+                <li><a href="#">Side 2</a></li>
+              
+                <li><a href="#">Bank 1</a></li>
+                <li><a href="#">Bank 2</a></li>
+              
+                <li><a href="#">Lån 1</a></li>
+                <li><a href="#">Lån 2</a></li>
+                <li><a href="#">Lån 3</a></li>
+            </ul>
+        </div>
+
+<!-- ACCORDION -------------------------------------------------------- -->
         <section class="block">
             <div class="content">
                 <div class="text">
