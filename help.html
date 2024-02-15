@@ -6,7 +6,12 @@
     <title>Find Hjælp</title>
     <link rel="stylesheet" href="styles.css"> <!-- STYLESHEET TIL NAVIGATION -->
     <link rel="stylesheet" href="accordion.css"> <!-- STYLESHEET TIL ACCORDION -->
+    <link rel="stylesheet" href="valuta.css">
     <script src="accordion.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <script src="valuta.js" defer></script>
+    <script src="dropdown.js" defer></script>
 </head>
 <body>
     <nav>
@@ -17,22 +22,28 @@
                     <li>ERHVERV</li>
                     <li>PRIVATE BANKING</li>
                     <li>LC&I</li>
-                    <li class="dropdown">
-                        ANDRE SITES
-                        "icon"
-                    </li>
+                    <li id="andre-sites" class="dropdown">
+                        <button onclick="navDropdown()" class="dropbtn"> ANDRE SITES <i class="fas fa-angle-down"></i></button>
+                        <div id="listDropdown" class="dropdownIndhold">
+                            <a href="#">Boligværktøj</a>
+                            <a href="#">Foreninger</a>
+                            <a href="#">dankskebank.com</a>
+                            <a href="#">Asset Management</a>
+                            <a href="#">Unge og studerende</a>
+                        </div>
+                </li>
                 </ul>
             </div>
         </div>
         <div class="mainnav">
             <div class="inner">
                 <div class="mainmenu">
-                    <p>DANSKE BANK</p>
+                    <p>DANT BANK</p>
                     <ul>
                         <li>Mit liv</li>
                         <li>Produkter</li>
-                        <li>Digitale værktøjer</li>
-                        <li class="blue">Find hjælp</li>
+                        <li><a href="valuta.html">Digitale værktøjer</a></li>
+                        <li style="color: #007bc7">Find hjælp</li>
                         <li>Bliv kunde</li>
                     </ul>
                 </div>
